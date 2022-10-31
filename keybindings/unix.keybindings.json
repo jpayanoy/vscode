@@ -1,0 +1,792 @@
+// Coloque sus atajos de teclado en este archivo para sobreescribir los valores predeterminadosauto[]
+[
+    //Atajos específicos por SO: when isLinux, isMac, isWindows, isWeb
+    //https://code.visualstudio.com/api/references/when-clause-contexts
+    //https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization
+    //https://filisantillan.com/blog/vscode-atajos/
+    //Para lograr una configuración física similar en Mac, se ha de cambiar la configuración del teclado
+    //para reemplazar la acción de cmd x ctrl
+
+    //Estructura para el comando
+        //SO
+        // {
+        //     "key": "key original",
+        //     "command": "comando a desactivar con el key original",
+        //     "when": "condición && SO" 
+        // },
+        //     {
+        //         "key": "key nuevo",
+        //         "command": "comando a activar con key nuevo",
+        //         "when": "condición && SO" 
+        //     },
+
+    //Insertar cursor: editor.action.insertCursorBelow
+        //Linux
+        {
+            "key": "ctrl+shift+down",
+            "command": "-editor.action.insertCursorBelow",
+            "when": "editorTextFocus && isLinux" 
+        },
+            {
+                "key": "ctrl+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus && isLinux" 
+            },
+        //Windows
+        {
+            "key": "ctrl+alt+down",
+            "command": "-editor.action.insertCursorBelow",
+            "when": "editorTextFocus && isWindows" 
+        },
+            {
+                "key": "ctrl+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus && isWindows" 
+            },
+        //Mac
+        {
+            "key": "alt+cmd+down",
+            "command": "-editor.action.insertCursorBelow",
+            "when": "editorTextFocus && isMac"
+        },
+            {
+                "key": "cmd+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus && isMac"
+            },
+
+    //Insertar cursor: editor.action.insertCursorAbove
+        //Linux
+        {
+            "key": "ctrl+shift+up",
+            "command": "-editor.action.insertCursorAbove",
+            "when": "editorTextFocus && isLinux"
+        },
+            {
+                "key": "ctrl+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+alt+up",
+            "command": "-editor.action.insertCursorAbove",
+            "when": "editorTextFocus && isWindows"
+        },
+            {
+                "key": "ctrl+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus && isWindows"
+            },
+        //Mac
+        {
+            "key": "alt+cmd+up",
+            "command": "-editor.action.insertCursorAbove",
+            "when": "editorTextFocus && isMac"
+        },
+            {
+                "key": "cmd+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus && isMac"
+            },
+
+    //Seleccionar palabras: cursorWordEndRightSelect
+        //Linux
+        {
+            "key": "ctrl+shift+right",
+            "command": "-cursorWordEndRightSelect",
+            "when": "textInputFocus && isLinux"
+        },
+            {
+                "key": "ctrl+shift+right",
+                "command": "cursorWordEndRightSelect",
+                "when": "textInputFocus && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+shift+right",
+            "command": "-cursorWordEndRightSelect",
+            "when": "textInputFocus && isWindows"
+        },
+            {
+                "key": "ctrl+shift+right",
+                "command": "cursorWordEndRightSelect",
+                "when": "textInputFocus && isWindows"
+            },
+        //Mac
+        {
+            "key": "shift+alt+right",
+            "command": "-cursorWordEndRightSelect",
+            "when": "textInputFocus && isMac"
+        },
+            {
+                "key": "cmd+shift+right",
+                "command": "cursorWordEndRightSelect",
+                "when": "textInputFocus && isMac"
+            },
+
+    //Seleccionar palabras: cursorWordLeftSelect
+        //Linux
+        {
+            "key": "ctrl+shift+left",
+            "command": "-cursorWordLeftSelect",
+            "when": "textInputFocus && isLinux"
+        },
+            {
+                "key": "ctrl+shift+left",
+                "command": "cursorWordLeftSelect",
+                "when": "textInputFocus && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+shift+left",
+            "command": "-cursorWordLeftSelect",
+            "when": "textInputFocus && isWindows"
+        },
+            {
+                "key": "ctrl+shift+left",
+                "command": "cursorWordLeftSelect",
+                "when": "textInputFocus && isWindows"
+            },
+        //Mac
+        {
+            "key": "shift+alt+left",
+            "command": "-cursorWordLeftSelect",
+            "when": "textInputFocus && isMac"
+        },
+            {
+                "key": "cmd+shift+left",
+                "command": "cursorWordLeftSelect",
+                "when": "textInputFocus && isMac"
+            },
+
+    //Mover linea: editor.action.moveLinesDownAction
+        //Linux
+        {
+            "key": "alt+down",
+            "command": "-editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "alt+down",
+                "command": "editor.action.moveLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "alt+down",
+            "command": "-editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "alt+down",
+                "command": "editor.action.moveLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "alt+down",
+            "command": "-editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "alt+down",
+                "command": "editor.action.moveLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+
+    //Mover linea: editor.action.moveLinesUpAction
+        //Linux
+        {
+            "key": "alt+up",
+            "command": "-editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "alt+up",
+                "command": "editor.action.moveLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "alt+up",
+            "command": "-editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "alt+up",
+                "command": "editor.action.moveLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "alt+up",
+            "command": "-editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "alt+up",
+                "command": "editor.action.moveLinesUpAction",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+
+    //Duplicar linea: editor.action.copyLinesDownAction
+        //Linux
+        {
+            "key": "ctrl+shift+alt+down",
+            "command": "-editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "shift+alt+down",
+                "command": "editor.action.copyLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "shift+alt+down",
+            "command": "-editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "shift+alt+down",
+                "command": "editor.action.copyLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "shift+alt+down",
+            "command": "-editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "shift+alt+down",
+                "command": "editor.action.copyLinesDownAction",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+
+    //Seleccionar coincidencias: editor.action.addSelectionToNextFindMatch
+        //Linux
+        {
+            "key": "ctrl+d",
+            "command": "-editor.action.addSelectionToNextFindMatch",
+            "when": "editorFocus && isLinux"
+        },
+            {
+                "key": "ctrl+d",
+                "command": "editor.action.addSelectionToNextFindMatch",
+                "when": "editorFocus && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+d",
+            "command": "-editor.action.addSelectionToNextFindMatch",
+            "when": "editorFocus && isWindows"
+        },
+            {
+                "key": "ctrl+d",
+                "command": "editor.action.addSelectionToNextFindMatch",
+                "when": "editorFocus && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+d",
+            "command": "-editor.action.addSelectionToNextFindMatch",
+            "when": "editorFocus && isMac"
+        },
+            {
+                "key": "cmd+d",
+                "command": "editor.action.addSelectionToNextFindMatch",
+                "when": "editorFocus && isMac"
+            },
+
+    //Explorar archivos: workbench.action.quickOpenNavigateNextInFilePicker
+        //Linux
+        {
+            "key": "ctrl+p",
+            "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+            "when": "inFilesPicker && inQuickOpen && isLinux"
+        },
+            {
+                "key": "ctrl+p",
+                "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+                "when": "inFilesPicker && inQuickOpen && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+p",
+            "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+            "when": "inFilesPicker && inQuickOpen && isWindows"
+        },
+            {
+                "key": "ctrl+p",
+                "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+                "when": "inFilesPicker && inQuickOpen && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+p",
+            "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+            "when": "inFilesPicker && inQuickOpen && isMac"
+        },
+            {
+                "key": "cmd+p",
+                "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+                "when": "inFilesPicker && inQuickOpen && isMac"
+            },
+
+    //Buscar: actions.find"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-actions.find",
+            "when": "editorFocus || editorIsOpen && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "actions.find",
+                "when": "editorFocus || editorIsOpen && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-actions.find",
+            "when": "editorFocus || editorIsOpen && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "actions.find",
+                "when": "editorFocus || editorIsOpen && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-actions.find",
+            "when": "editorFocus || editorIsOpen && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "actions.find",
+                "when": "editorFocus || editorIsOpen && isMac"
+            },
+
+    //Buscar: editor.action.extensioneditor.showfind"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-editor.action.extensioneditor.showfind",
+            "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "editor.action.extensioneditor.showfind",
+                "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-editor.action.extensioneditor.showfind",
+            "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "editor.action.extensioneditor.showfind",
+                "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-editor.action.extensioneditor.showfind",
+            "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "editor.action.extensioneditor.showfind",
+                "when": "!editorFocus && activeEditor == 'workbench.editor.extension' && isMac"
+            },
+
+    //Buscar: editor.action.webvieweditor.showFind"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-editor.action.webvieweditor.showFind",
+            "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "editor.action.webvieweditor.showFind",
+                "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-editor.action.webvieweditor.showFind",
+            "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "editor.action.webvieweditor.showFind",
+                "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-editor.action.webvieweditor.showFind",
+            "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "editor.action.webvieweditor.showFind",
+                "when": "webviewFindWidgetEnabled && !editorFocus && activeEditor == 'WebviewEditor' && isMac"
+            },
+
+    //Buscar: repl.action.filter"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-repl.action.filter",
+            "when": "inDebugRepl && textInputFocus && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "repl.action.filter",
+                "when": "inDebugRepl && textInputFocus && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-repl.action.filter",
+            "when": "inDebugRepl && textInputFocus && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "repl.action.filter",
+                "when": "inDebugRepl && textInputFocus && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-repl.action.filter",
+            "when": "inDebugRepl && textInputFocus && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "repl.action.filter",
+                "when": "inDebugRepl && textInputFocus && isMac"
+            },
+
+    //Buscar: settings.action.search"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-settings.action.search",
+            "when": "inSettingsEditor && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "settings.action.search",
+                "when": "inSettingsEditor && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-settings.action.search",
+            "when": "inSettingsEditor && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "settings.action.search",
+                "when": "inSettingsEditor && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-settings.action.search",
+            "when": "inSettingsEditor && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "settings.action.search",
+                "when": "inSettingsEditor && isMac"
+            },
+
+    //Buscar: keybindings.editor.searchKeybindings"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-keybindings.editor.searchKeybindings",
+            "when": "inKeybindings && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "keybindings.editor.searchKeybindings",
+                "when": "inKeybindings && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-keybindings.editor.searchKeybindings",
+            "when": "inKeybindings && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "keybindings.editor.searchKeybindings",
+                "when": "inKeybindings && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-keybindings.editor.searchKeybindings",
+            "when": "inKeybindings && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "keybindings.editor.searchKeybindings",
+                "when": "inKeybindings && isMac"
+            },
+
+    //Buscar: notebook.find"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-notebook.find",
+            "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "notebook.find",
+                "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-notebook.find",
+            "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "notebook.find",
+                "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-notebook.find",
+            "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "notebook.find",
+                "when": "notebookEditorFocused || !editorFocus && activeEditor == 'workbench.editor.notebook' && isMac"
+            },
+
+    //Buscar: problems.action.focusFilter"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-problems.action.focusFilter",
+            "when": "focusedView == 'workbench.panel.markers.view' && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "problems.action.focusFilter",
+                "when": "focusedView == 'workbench.panel.markers.view' && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-problems.action.focusFilter",
+            "when": "focusedView == 'workbench.panel.markers.view' && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "problems.action.focusFilter",
+                "when": "focusedView == 'workbench.panel.markers.view' && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-problems.action.focusFilter",
+            "when": "focusedView == 'workbench.panel.markers.view' && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "problems.action.focusFilter",
+                "when": "focusedView == 'workbench.panel.markers.view' && isMac"
+            },
+
+    //Buscar: workbench.action.terminal.focusFind"
+        //Linux
+        {
+            "key": "ctrl+f",
+            "command": "-workbench.action.terminal.focusFind",
+            "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isLinux"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "workbench.action.terminal.focusFind",
+                "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+f",
+            "command": "-workbench.action.terminal.focusFind",
+            "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isWindows"
+        },
+            {
+                "key": "ctrl+f",
+                "command": "workbench.action.terminal.focusFind",
+                "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+f",
+            "command": "-workbench.action.terminal.focusFind",
+            "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isMac"
+        },
+            {
+                "key": "cmd+f",
+                "command": "workbench.action.terminal.focusFind",
+                "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported && isMac"
+            },
+
+    //Buscar y reemplazar: editor.action.startFindReplaceAction"
+        //Linux
+        {
+            "key": "ctrl+h",
+            "command": "-editor.action.startFindReplaceAction",
+            "when": "editorFocus || editorIsOpen && isLinux"
+        },
+            {
+                "key": "ctrl+h",
+                "command": "editor.action.startFindReplaceAction",
+                "when": "editorFocus || editorIsOpen && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+h",
+            "command": "-editor.action.startFindReplaceAction",
+            "when": "editorFocus || editorIsOpen && isWindows"
+        },
+            {
+                "key": "ctrl+h",
+                "command": "editor.action.startFindReplaceAction",
+                "when": "editorFocus || editorIsOpen && isWindows"
+            },
+        //Mac
+        {
+            "key": "alt+cmd+f",
+            "command": "-editor.action.startFindReplaceAction",
+            "when": "editorFocus || editorIsOpen && isMac"
+        },
+            {
+                "key": "cmd+h",
+                "command": "editor.action.startFindReplaceAction",
+                "when": "editorFocus || editorIsOpen && isMac"
+            },
+
+    //Agregar comentarios: editor.action.addCommentLine"
+        //Linux
+        {
+            "key": "ctrl+k ctrl+c",
+            "command": "-editor.action.addCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "ctrl+k ctrl+c",
+                "command": "editor.action.addCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+k ctrl+c",
+            "command": "-editor.action.addCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "ctrl+k ctrl+c",
+                "command": "editor.action.addCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+k cmd+c",
+            "command": "-editor.action.addCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "cmd+k cmd+c",
+                "command": "editor.action.addCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+
+    //Remover comentarios: editor.action.removeCommentLine"
+        //Linux
+        {
+            "key": "ctrl+k ctrl+u",
+            "command": "-editor.action.removeCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "ctrl+k ctrl+u",
+                "command": "editor.action.removeCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "ctrl+k ctrl+u",
+            "command": "-editor.action.removeCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "ctrl+k ctrl+u",
+                "command": "editor.action.removeCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "cmd+k cmd+u",
+            "command": "-editor.action.removeCommentLine",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "cmd+k cmd+u",
+                "command": "editor.action.removeCommentLine",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+
+    //Comentar/descomentar bloque: editor.action.blockComment"
+        //Linux
+        {
+            "key": "ctrl+shift+a",
+            "command": "-editor.action.blockComment",
+            "when": "editorTextFocus && !editorReadonly && isLinux"
+        },
+            {
+                "key": "ctrl+shift+a",
+                "command": "editor.action.blockComment",
+                "when": "editorTextFocus && !editorReadonly && isLinux"
+            },
+        //Windows
+        {
+            "key": "shift+alt+a",
+            "command": "-editor.action.blockComment",
+            "when": "editorTextFocus && !editorReadonly && isWindows"
+        },
+            {
+                "key": "ctrl+shift+a",
+                "command": "editor.action.blockComment",
+                "when": "editorTextFocus && !editorReadonly && isWindows"
+            },
+        //Mac
+        {
+            "key": "shift+alt+a",
+            "command": "-editor.action.blockComment",
+            "when": "editorTextFocus && !editorReadonly && isMac"
+        },
+            {
+                "key": "cmd+shift+a",
+                "command": "editor.action.blockComment",
+                "when": "editorTextFocus && !editorReadonly && isMac"
+            },
+]

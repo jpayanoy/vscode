@@ -1,0 +1,8 @@
+#Carpeta de pruebas
+test/
+
+#Carpeta de configuracion
+logs/
+
+#Archivos
+.DS_Store
