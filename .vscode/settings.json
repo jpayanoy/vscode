@@ -1,18 +1,104 @@
 {
-    // Editor
-
-    // Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
+    //Editor
+    //..Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.
     "editor.rulers": [80, 160],
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#444444"
-    },
+    "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
-
-    "commentTranslate.targetLanguage": "es",
-
-    //Folding sections
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "off",
+    //..Indentation
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    //..Folding sections
     "editor.showFoldingControls": "always",
     "editor.folding": true,
-    "editor.foldingStrategy": "indentation", 
+    "editor.foldingStrategy": "indentation",
+
+    //Code difference
+    //..When enabled, the diff editor ignores changes in leading or trailing whitespace.
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
+
+    //Color cutomizations
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#444444",
+        "editorLineNumber.activeForeground": "#ffffff",
+        "editorLineNumber.foreground": "#565656"
+    },
+
+    //Files
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+      "**/toc.json": "jsonc"
+    },
+
+    //Comment translator
+    "commentTranslate.targetLanguage": "es",
+    "commentTranslate.multiLineMerge": true,
+
+    //Code formatter
+    "[javascript]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnPaste": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    //Prettier
+    "prettier.tabWidth": 4,
+
+    //XML Tags editor and auto rename
+    "editor.linkedEditing": true,
+
+    //Better-comments
+    "better-comments.tags": [
+        {
+          "tag": "!",
+          "color": "#F44336",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "#include",
+          "color": "#FFB300",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": true,
+          "italic": false
+        },
+        {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "//",
+          "color": "#474747",
+          "strikethrough": true,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "todo",
+          "color": "#00bfa5",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        }
+    ]
 }

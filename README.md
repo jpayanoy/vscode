@@ -3,32 +3,25 @@
 
 
 ## Extensiones
-+ **Auto Rename Tag**: Autorenombra el nombre del elemento al principio y al final de la etiqueta en HTML/XML
-+ **Bracket Pair Colorizer**: Colorea el par de corchetes, llaves, etc según son anidados
-+ **Comment Translate**: Traduce los comentarios a un idioma especificado
++ **Better Comments**: Colorea los comentarios de acuerdo a un patrón establecido como TODO, #include, etc
 + **ESLint**: Analiza y muestra errores de sintaxis en Javascript
 + **Git History**: Muestra la linea de tiempo de los commits realizados en un repositorio y las diferentes opciones sobre esta
-+ **XML Tools**: Autocompleta las etiquetas de elementos XML
++ **XML (XML Languaje Support by Red Hat)**: Utilidades para trabajar con XML
++ **Prettier - Code formatter**: Formatea el código con reglas específicas
++ **Graphviz (dot) language support for Visual Studio Code**: Permite previsualizar gráficos generados con sintaxis DOT
 
 ## Extensiones complementarias
-+ **Spanish Languaje Pack for Visual Studio Code**: Cambia el idioma de Visual Studio Code
-+ **Material Icon Theme**: Aplica un tema atractivo a los iconos de los ficheros
++ **Comment Translate**: Traduce los comentarios a un idioma especificado
 + **GitLens**: Muestra información de los commits realizados directamente en el código
 + **Live Share**: Permite la colaboración remota
++ **Material Icon Theme**: Aplica un tema atractivo a los iconos de los ficheros
++ **Spanish Languaje Pack for Visual Studio Code**: Cambia el idioma de Visual Studio Code
 
 ***
-## Settings en un repositorio
-Añade líneas de guía. Por ejemplo, para crear dos líneas guía a 80 y 160 caracteres y con un color determinado, debe crear la carpeta ./vscode en la carpeta de trabajo y dentro de esta, el fichero **settings.json** con el siguiente código:
+## Configuración del repositorio
+Aplique diferentes configuraciones específicas para el repositorio como la creación de línes guía, parametrización de comentarios formateados, etc. Para esto cree la carpeta **./vscode** en la carpeta de trabajo y dentro de esta, el fichero **settings.json** con el siguiente código:
 
-```json
-{
-    "commentTranslate.targetLanguage": "es",
-    "editor.rulers": [80,160],
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#646464"
-    }
-}
-```
+![Settings](img/settings-json-under-vscode.png "Configuraciones del editor")
 [Settings VSCode](.vscode/settings.json)
 
 ***
@@ -115,20 +108,35 @@ personalizada para lograr la misma combinación en Linux/Windows/Mac)
     ~~~
     git push origin develop
     ~~~
-+ **git remote set-url {nombreDelWorkspace} {urlDelOrigen}**: Actualiza la dirección URL remota, por ejemplo, de HTTPS a SSH, viceversa u otra dirección. 
++ **git remote set-url {nombreDelWorkspace} {urlDelOrigen}**: Actualiza la dirección URL remota, por ejemplo, de HTTPS a SSH, viceversa u otra dirección.
     ~~~
     git remote set-url origin git@dominio.com:USERNAME/REPOSITORY.git
     ~~~
 + **git stash**: Almacena temporalmente los cambios que se haya realizado en el código
 + **git stash pop**: Aplica los cambios almacenados temporalmente
 
+## Git-log
+
++ **git log**: Historial de commits
++ **git log --oneline**: Historial de commits resumida
++ **git log --pretty=format:"%h - %an, %ar : %s"**: Formatea la salida del commit
++ **git log --graph**: Muestra como se han ido bifurcando los commits
++ **git log --branches**: Muestra los commits por ramas
+
++ **git log --grep="${busqueda}"**: Filtra los commits que contengan cierta palabra
++ **git log --author="Nombre Autor"**: Muestra los commits realizados por cierto Autor
++ **git log --since="aaaa-mm-dd" --until="aaaa-mm-dd"**: Muestra los commits en un rango de fechas
++ **git log -- ${ruta}**: Muestra los commits que se relacionen con un fichero
++ **git log --grep="${expresion regular}"**: Filtra los commits con expresiones regulares
++ **git log -S"${parte del codigo}"**: Filtra los commits por codigo
+
 ## Git-flow
 [Git-flow diagram](http://danielkummer.github.io/git-flow-cheatsheet/)
 
 + **git flow init**: (Requiere instalación de git-flow) Inicializa el flujo de trabajo
 
-### Notación (prefijos) para comentarios de acuerdo a Git-flow
-+ **feat**: Una nueva característica
+## Notación (prefijos) para commits del repositorio
++ **feat**: Una nueva característica o funcionalidad
 + **fix**: Una corrección de error
 + **docs**: Cambios en la documentación o en los comentarios(notar que el tipo es en plural 'docs')
 + **style**: Cambios que no afectan el significado del código (espacios en blanco,  formateo, faltó un punto y coma, etc)
@@ -137,4 +145,28 @@ personalizada para lograr la misma combinación en Linux/Windows/Mac)
 + **perf**: Cambio de código que mejora el rendimiento
 + **revert**: rollback del commit 5050sad_istic
 + **chore**: Cambios en el proceso de construcción(compilación) o herramientas auxiliares y/o bibliotecas como generadores de documentación
-+ **import**: Importación de ficheros desde otra biblioteca
++ **import**: Importación de ficheros ya desarrollados desde otro medio
++ **evol**: Evolucion de una caracteristica o funcionalidad existente
++ **rev**: Revisión de desarrollo
++ **dev**: Característica en desarrollo
+
+## Git - Identidades múltiples SSH - Bitbucket
+Por defecto se crea una única identidad en el fichero config con la siguiente estructura:
+~~~
+Host bitbucket.org
+    IdentityFile ~/.ssh/id_rsa
+~~~
+Se puede crear alias para tener varias identidades que van al mismo host usando la siguiente estructura:
+~~~
+Host workid
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/id_work
+Host personalid
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/id_personal
+~~~
+Al hacer esto se debe sustituir el host de la dirección URL del repositorio por el alias:
+~~~
+    git@bitbucket.org:accountname/reponame.git
+=>  git@alias:accountname/reponame.git
+~~~
