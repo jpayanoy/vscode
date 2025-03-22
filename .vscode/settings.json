@@ -18,7 +18,7 @@
 
     //Code difference
     //..When enabled, the diff editor ignores changes in leading or trailing whitespace.
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,
 
     //Color cutomizations
@@ -52,6 +52,22 @@
 
     //XML Tags editor and auto rename
     "editor.linkedEditing": true,
+
+    //GitHub Copilot
+    "github.copilot.chat.codeGeneration.instructions": [
+      {
+        "text": "Si el texto inicia con 'TR', traducelo de español a inglés."
+      },
+      {
+        "text": "Lo mensajes de commit se deben proponer en inglés."
+      },
+      {
+        "text": "Ensure proposed commit messages are in English"
+      },
+    // {
+    //   "file": "code-style.md"
+    // }
+    ],
 
     //Better-comments
     "better-comments.tags": [
